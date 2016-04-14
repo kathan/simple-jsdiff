@@ -56,7 +56,7 @@ function compare(old_obj, new_obj, diff, path){
           }
           //var idx = tmp_new_ary.indexOf(old_obj[i]);
           if(idx > -1){
-            console.log('removing '+idx+' from '+path.join('.')+' "'+JSON.stringify(tmp_new_ary[idx])+'". Match to '+JSON.stringify(old_obj[i]));
+            //console.log('removing '+idx+' from '+path.join('.')+' "'+JSON.stringify(tmp_new_ary[idx])+'". Match to '+JSON.stringify(old_obj[i]));
             tmp_new_ary.splice(idx, 1);
           }else{
             //doesn't exist
@@ -78,7 +78,7 @@ function compare(old_obj, new_obj, diff, path){
         return result;
       default:
         if(old_obj !== new_obj){
-          console.log(old_obj+'!='+new_obj)
+          //console.log(old_obj+'!='+new_obj)
           diff.push({path: path.slice(), old_type: old_type, new_type:new_type, old: old_obj, new: new_obj});
           result = false;
         }
